@@ -1,4 +1,4 @@
-# app
+# 项目构建用Vue技术栈编写H5页面App
 
 ## Project setup
 ```
