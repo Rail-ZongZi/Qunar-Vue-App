@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-header/>
+    <v-header :seller="seller"/>
     <div class="tab">
       <div class="tab-item">
         <router-link to='/seller'>商品</router-link>
@@ -20,12 +20,20 @@
 
 <script type='text/ecmascript-6'>
 import VHeader from '@/views/Header/index.vue'
+import axios from 'axios'
 
 export default {
   name: 'app',
   data () {
     return {
+      seller: {}
     }
+  },
+  created () {
+    axios.get('/api/seller').then(res => {
+      let Data = res.data
+      this.seller = Data.data
+    })
   },
   components: {
     'v-header': VHeader
