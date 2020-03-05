@@ -1,3 +1,24 @@
-### 项目构建用Vue技术栈编写H5页面App
+# 项目构建用Vue技术栈编写H5页面App
 
-- 基于滴滴 `cube-ui`进行编写项目
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
