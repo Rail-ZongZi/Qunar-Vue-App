@@ -5,4 +5,22 @@
   text-overflow: ellipsis;
 }
 
-/*设置多行省略号*/
+/* 设置多行省略号 */
+.line-nowrap($lint) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lint;
+  -webkit-box-orient: vertical;
+}
+
+/* 设置2@X 、3@X图片 */
+bg-image($url) {
+  background-image: url($url + '@2x.png');
+
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url($url + '@3x.png');
+  }
+}
+
+/*  */

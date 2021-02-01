@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="header">
-      <img src="./assets/default.png" alt="login" />
+      <div class="icon"></div>
       <h1>ChickenMusic</h1>
     </div>
     <v-header />
@@ -23,23 +23,30 @@ export default {
 
 <style lang="stylus">
 @import './common/styles/variable.styl';
+@import './common/styles/mixin.styl';
 
 .header {
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: 44px;
+  line-height: 44px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: $color-theme;
+  font-size: 0;
 
-  img {
-    width: 40px;
-    height: 40px;
+  .icon {
+    width: 30px;
+    height: 32px;
+    margin-right: 9px;
+    bg-image('./assets/logo');
+    background-size: 32px 32px;
   }
 
   h1 {
-    color: $color-theme;
+    line-height: 44px;
+    font-size: $font-size-large;
   }
 }
 </style>
